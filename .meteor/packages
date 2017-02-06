@@ -1,0 +1,6 @@
+standard-app-packages
+iron:router
+twbs:bootstrap
+accounts-password
+accounts-ui
+jparker:crypto-md5
