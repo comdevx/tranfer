@@ -1,0 +1,44 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand" href="/">Tranfer</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            {{>menu}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+<template name="layout">
+  {{#if currentUser}} {{> yield}} {{else}}
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6">
+          {{> login}}
+        </div>
+        <div class="col-xs-6">
+          {{> register}}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+</template>
